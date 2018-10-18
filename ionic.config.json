@@ -1,7 +1,0 @@
-{
-  "name": "AppNeuropublico",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}
