@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons>
+            <button ion-button (click)="viewCtrl.dismiss(false)">
+                Cerrar
+            </button>
+        </ion-buttons>
+
+        <ion-title>Iniciar Sesiòn</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" [(ngModel)]="username" value=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="contrasena" value=""></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <div padding>
+        <button [disabled]="username.length < 5 || contrasena.length < 5" ion-button color="primary" block>Iniciar Sesiòn</button>
+    </div>
+
+</ion-content>
