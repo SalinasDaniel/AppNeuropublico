@@ -6,20 +6,41 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+//paginas
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SlidePage } from '../pages/slide/slide';
+
+import { CarritoPage,
+        CategoriasPage,
+        LoginPage,
+        OrdenesPage,
+        OrdenesDetallePage,
+        PorCategoriasPage,
+        TabsPage,
+        ProductoPage }  from '../pages/index.paginas';
 
 //Servicios
 import { CarritoProvider } from '../providers/carrito/carrito';
 import { ProductosProvider } from '../providers/productos/productos';
 import { UsuarioProvider } from '../providers/usuario/usuario';
 
+//pipes
+import { ImagenPipe } from "../pipes/imagen/imagen";
+
 @NgModule({
   declarations: [
     MyApp,
+    ImagenPipe,
     HomePage,
-    SlidePage
+    SlidePage,
+    CategoriasPage,
+    LoginPage,
+    OrdenesPage,
+    OrdenesDetallePage,
+    PorCategoriasPage,
+    TabsPage,
+    ProductoPage 
   ],
   imports: [
     BrowserModule,
@@ -30,7 +51,14 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
   entryComponents: [
     MyApp,
     HomePage,
-    SlidePage
+    SlidePage,
+    CategoriasPage,
+    LoginPage,
+    OrdenesPage,
+    OrdenesDetallePage,
+    PorCategoriasPage,
+    TabsPage,
+    ProductoPage 
   ],
   providers: [
     StatusBar,
