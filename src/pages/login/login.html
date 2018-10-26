@@ -1,33 +1,36 @@
 <ion-header>
+
     <ion-navbar>
+
         <ion-buttons>
             <button ion-button (click)="viewCtrl.dismiss(false)">
                 Cerrar
             </button>
         </ion-buttons>
 
-        <ion-title>Iniciar Sesiòn</ion-title>
+        <ion-title>Iniciar Sesion</ion-title>
     </ion-navbar>
+
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
     <ion-list>
 
         <ion-item>
-            <ion-label floating>Username</ion-label>
-            <ion-input type="text" [(ngModel)]="username" value=""></ion-input>
+            <ion-label floating>Correo</ion-label>
+            <ion-input type="email" [(ngModel)]="correo" value=""></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label floating>Password</ion-label>
-            <ion-input type="password" [(ngModel)]="contrasena" value=""></ion-input>
+            <ion-label floating>Contrasena</ion-label>
+            <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
         </ion-item>
 
     </ion-list>
 
-    <div padding>
-        <button [disabled]="username.length < 5 || contrasena.length < 5" ion-button color="primary" block>Iniciar Sesiòn</button>
-    </div>
+    <button ion-button block (click)="ingresar()" [disabled]="correo.length < 5 || contrasena.length < 5 ">
+        Ingresar
+    </button>
 
 </ion-content>

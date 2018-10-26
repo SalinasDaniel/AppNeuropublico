@@ -1,8 +1,29 @@
 <ion-header>
     <ion-navbar>
+        <ion-buttons start>
+            <button ion-button (click)="_us.cerrar_sesion()" *ngIf="_us.activo()">
+                Salir
+            </button>
+        </ion-buttons>
+
+
         <ion-title>
-            Neuropublico
+            Productos
         </ion-title>
+
+        <ion-buttons end>
+
+            <button ion-button icon-only (click)="_cs.ver_carrito()">
+                <ion-icon name="cart"></ion-icon>
+                <ion-badge color="danger"
+                           class="carrito-numero"
+                           *ngIf="_cs.items.length > 0">
+                           {{ _cs.items.length }}
+                </ion-badge>
+            </button> &nbsp; &nbsp;
+
+        </ion-buttons>
+
     </ion-navbar>
 </ion-header>
 

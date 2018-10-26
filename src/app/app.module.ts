@@ -18,7 +18,8 @@ import { CarritoPage,
         OrdenesDetallePage,
         PorCategoriasPage,
         TabsPage,
-        ProductoPage }  from '../pages/index.paginas';
+        ProductoPage,
+        BuscarPage }  from '../pages/index.paginas';
 
 //Servicios
 import { CarritoProvider } from '../providers/carrito/carrito';
@@ -27,6 +28,10 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
 
 //pipes
 import { ImagenPipe } from "../pipes/imagen/imagen";
+
+
+//storage
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -40,12 +45,15 @@ import { ImagenPipe } from "../pipes/imagen/imagen";
     OrdenesDetallePage,
     PorCategoriasPage,
     TabsPage,
-    ProductoPage 
+    ProductoPage,
+    CarritoPage,
+    BuscarPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -58,7 +66,9 @@ import { ImagenPipe } from "../pipes/imagen/imagen";
     OrdenesDetallePage,
     PorCategoriasPage,
     TabsPage,
-    ProductoPage 
+    ProductoPage,
+    CarritoPage,
+    BuscarPage
   ],
   providers: [
     StatusBar,
